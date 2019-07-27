@@ -10,9 +10,8 @@ import CardCTA from '../components/CardCTA';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import heroStyles from '../components/hero.module.css'
 
-class ArticleTemplate extends React.Component {
+class ResourceTemplate extends React.Component {
   render() {
     const article = get(this.props, 'data.contentfulArticle')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -23,10 +22,10 @@ class ArticleTemplate extends React.Component {
           <Helmet title={`${article.title} | ${siteTitle}`} />
 
           <div className="main-hero">
-          <Link to="/articles">← Back to Resources</Link>
+          <Link to="/resources">← Back to Resources</Link>
           <br /><br />
           <h1 className="section-headline">{article.title}</h1>
-            <Img className={heroStyles.heroImage} alt={article.title} fluid={article.mainImage.fluid} />
+            <Img alt={article.title} fluid={article.mainImage.fluid} />
           </div>
           <div className="wrapper">
 
@@ -53,7 +52,7 @@ class ArticleTemplate extends React.Component {
   }
 }
 
-export default ArticleTemplate
+export default ResourceTemplate
 
 export const pageQuery = graphql`
   query ArticleBySlug($slug: String!) {

@@ -1,4 +1,6 @@
-
+html {
+  font-size: 14px;
+}
 
 body {
   font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -21,6 +23,7 @@ h3 {
   font-weight: normal;
 }
 
+
 a {
   color: currentColor;
 }
@@ -40,14 +43,14 @@ a {
 }
 
 .main-hero h1 {
-  font-size: 60px;
+  font-size: 4.5em;
   line-height: 1;
   font-weight: 600;
   font-family: serif;
 }
 
 .main-hero p {
-  font-size: 20px;
+  font-size: 1.4em;
   opacity: 0.7;
 }
 
@@ -94,4 +97,31 @@ button {
 
 .list-inline li {
   display: inline-block;
+}
+
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 20vh;
+  max-height: 100px;
+  font-size: 1.25em;
+  border-bottom: solid 1px #ddd;
+}
+
+.navigationItem {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.navigationItem a {
+  color: currentColor;
+}
+
+.previewTitle {
+  font-size: 1.5em;
 }

@@ -1,18 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './navigation.module.css'
+
 
 export default () => (
   <nav role="navigation">
-    <ul className={styles.navigation}>
-      <li className={styles.navigationItem}>
+    <ul className="navigation">
+      <li className="navigationItem">
         <Link to="/">Home</Link>
       </li>
-      <li className={styles.navigationItem}>
-        <Link to="/articles/">Resources</Link>
-      </li>
-      <li className={styles.navigationItem}>
-        <Link to="/blog/">Credit Cards</Link>
+      <li className="navigationItem">
+        <Link to="/resources/">Resources</Link>
       </li>
     </ul>
   </nav>
