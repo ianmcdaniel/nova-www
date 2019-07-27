@@ -16,19 +16,28 @@ const client = new ApolloClient({
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const articles = get(this, 'props.data.allContentfulArticle.edges')
+
 
     return (
 			<ApolloProvider client={client}>
 	      <Layout location={this.props.location} >
 	        <div style={{ background: '#fff' }}>
 	          <Helmet title={siteTitle} />
-	          <Hero data={author.node} />
+            <div className="main-hero">
+              <h1>Nova Credit creates a world beyond borders</h1>
+              <p>
+                Moving to a new country is hard. On top of that, basic tasks
+                like renting an apartment or getting a credit card can be almost
+                impossible without a US credit history. Nova Credit lets you
+                arrive and thrive.
+              </p>
+              <button>Find Credit Cards</button>
+            </div>
 	          <div className="wrapper">
-	            <h2 className="section-headline">Recent articles</h2>
+	            <h2 className="section-headline">Recent Articles</h2>
 	            <ul className="article-list">
-	              {posts.map(({ node }) => {
+	              {articles.map(({ node }) => {
 	                return (
 	                  <li key={node.slug}>
 	                    <ArticlePreview article={node} />
@@ -53,42 +62,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulArticle(sort: { fields: [updatedAt], order: DESC }, limit: 3) {
       edges {
         node {
-          title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
+          title
+          summary
+          updatedAt(formatString: "MMMM Do, YYYY")
+          thumbnailImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }

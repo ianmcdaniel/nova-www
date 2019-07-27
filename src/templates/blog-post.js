@@ -33,9 +33,6 @@ class BlogPostTemplate extends React.Component {
               {post.publishDate}
             </p>
 						<div>
-
-
-
 							{
 								post.bodyRich
 									? documentToReactComponents(post.bodyRich.json, {

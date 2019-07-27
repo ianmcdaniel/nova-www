@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost'
 import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8002/___graphql'
+  uri: 'http://localhost:8000/___graphql'
 });
 
 
@@ -30,7 +30,7 @@ export default ({ slug }) => (
 			return (
 				<>
 					<h1>{creditCard.name}</h1>
-					<img src={creditCard.image_url} />
+					<img src={creditCard.image_url} alt={creditCard.name} />
 				</>
 			);
     }}
