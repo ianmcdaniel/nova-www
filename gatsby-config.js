@@ -20,7 +20,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful starter',
   },
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/nova-www',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
@@ -29,6 +29,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
-    }
+    },
+		{
+			resolve: 'gatsby-source-graphql',
+			options: {
+				typeName: "NOVA",
+				fieldName: "nova",
+				url: "https://offers.novacredit.com/api/graphql"
+			}
+		}
   ],
 }
