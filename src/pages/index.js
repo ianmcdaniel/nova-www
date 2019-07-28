@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
@@ -31,7 +31,7 @@ class RootIndex extends React.Component {
                 impossible without a US credit history. Nova Credit lets you
                 arrive and thrive.
               </p>
-              <button>Find Credit Cards</button>
+              <Link to="cards/" className="button">Find Credit Cards</Link>
             </div>
 	          <div className="wrapper">
 	            <h2 className="section-headline">Recent Articles</h2>

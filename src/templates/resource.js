@@ -29,8 +29,9 @@ class ResourceTemplate extends React.Component {
           </div>
           <div className="wrapper">
 
-            <p>{article.updatedAt}</p>
+
 						<div className="article-body">
+            <p>{article.updatedAt}</p>
 							{
                 documentToReactComponents(article.body.json, {
 								  renderNode: {

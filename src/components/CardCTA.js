@@ -9,6 +9,8 @@ export default ({ slug }) => (
       query ($slug: String!) {
         creditCard(slug: $slug) {
           name
+          slug
+          bullets
 					image_url
         }
       }
@@ -21,11 +23,18 @@ export default ({ slug }) => (
 
 			const { creditCard } = data;
 			return (
-				<>
-					<h1>{creditCard.name}</h1>
-          <p>{creditCard.image_url}</p>
-					xx<img src={creditCard.image_url} alt={creditCard.name} />xx
-				</>
+        <div className="card inline" key={creditCard.slug}>
+          <div className="card-image">
+            <img src={creditCard.image_url} className="card-img" />
+          </div>
+          <div className="card-details">
+            <h3>{creditCard.name}</h3>
+            <p>{creditCard.bullets[0]}</p>
+          </div>
+          <div>
+            <button>Apply</button>
+          </div>
+        </div>
 			);
     }}
   </Query>
