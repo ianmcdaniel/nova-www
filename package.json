@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-contentful-starter",
-  "description": "Starter Contentful Gatsby Blog",
+  "name": "nova-www",
+  "description": "Nova Website",
   "version": "1.0.0",
-  "author": "Stefan Judis <stefanjudis@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
-  },
+  "author": "Nova Credit",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "apollo-boost": "^0.4.3",
