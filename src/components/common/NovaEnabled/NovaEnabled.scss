@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nova-enabled {
+  display: block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+  .question-circle {
+    padding-top: 11px;
+    color: #1a732f;
+  }
+
+  .nova-enabled-text {
+    margin-top: 8px;
+    padding-left: 4px;
+    color: #1a732f;
+    font-style: italic;
+    font-size: 0.85em;
+  }
+
+  .tooltip {
+    border: solid 1px #bac2cf;
+    font-size: 1.3rem;
+    top: 85%;
+    left: -90%;
+    padding: 15px 24px;
+    line-height: 0;
+
+    &:before {
+      border: solid 1px #bac2cf;
+      border-width: 1px 0 0 1px;
+      left: 36%;
+    }
+  }
+
+  div:not(.tooltip) {
+    display: inline-flex;
+  }
+
+  button {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, 'md')) {
+  .nova-enabled {
+    .tooltip {
+      left: 2%;
+      line-height: 1.2;
+      padding: 10px 24px 10px 24px;
+    }
+  }
+}

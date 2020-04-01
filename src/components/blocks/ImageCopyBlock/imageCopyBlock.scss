@@ -1,0 +1,49 @@
+.image-copy-block {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  img {
+    z-index: 1;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #747c90;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__column {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__icon {
+    max-width: 50px;
+  }
+  ul {
+    padding-left: 0;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      &:before {
+        font-family: 'Font Awesome 5 Pro';
+        content: '\F058';
+        color: #00c276;
+        font-weight: 900;
+        float: left;
+        margin-right: 5px;
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+.image-copy-block--flipped {
+  flex-direction: row-reverse;
+}

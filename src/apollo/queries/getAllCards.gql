@@ -1,0 +1,55 @@
+query(
+	$country: String,
+	$features: [CreditCardFeaturesEnum],
+	$rewards: [CreditCardRewardsEnum]
+) {
+	creditCards(
+		country: $country,
+		features: $features,
+		rewards: $rewards
+	) {
+		totalCount
+		nodes {
+			id: slug
+			external_id
+			source
+			slug
+			name
+			bullets
+			labels
+			credit_rating
+			terms_url
+			image_url
+			apply_url
+			manufacturer
+			processing_network
+			annual_fee
+			annual_fee_description
+			currency
+			product_type
+			intro_purchase_apr
+			intro_purchase_apr_period_description
+			intro_purchase_apr_description
+			regular_purchase_apr
+			regular_purchase_apr_description
+			intro_transfer_apr
+			intro_transfer_apr_period_description
+			intro_transfer_apr_description
+			regular_transfer_apr
+			regular_transfer_apr_description
+			cash_advance_apr_description
+			penalty_apr_description
+			balance_transfer_fee_description
+			cash_advance_fee_description
+			late_payment_fee_description
+			return_check_fee_description
+			over_limit_fee_description
+			foreign_transaction_fee_description
+			legal_description
+			bonus_offer
+			bonus_offer_terms
+			secured
+			nova_enabled
+		}
+	}
+}

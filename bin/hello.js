@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const pkg = require('../package.json')
+const chalk = require('chalk');
+const pkg = require('../package.json');
 
 console.log(`
 
@@ -27,4 +27,4 @@ ${chalk.yellow(
 For further information check the readme of the project
 (https://github.com/contentful-userland/gatsby-contentful-starter)
 
-`)
+`);

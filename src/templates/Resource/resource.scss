@@ -1,0 +1,30 @@
+.article {
+  width: 720px;
+  margin: auto;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 25.9px;
+
+  &__date {
+    color: #747c90;
+    font-size: 1.1rem;
+  }
+
+  &__summary {
+    color: rgb(28, 50, 80);
+  }
+
+  &__headline {
+    font-family: 'DM Serif Display', sans-serif;
+  }
+
+  &__image {
+    margin-top: 10px;
+  }
+
+  &__body {
+    margin: 20px 0 10px;
+    line-height: 1.85;
+    text-align: left;
+  }
+}

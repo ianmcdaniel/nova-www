@@ -1,0 +1,31 @@
+.collection {
+  padding-top: 80px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subheader {
+    color: #747c90;
+    margin-bottom: 24px;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  &__footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+    &--centered {
+      text-align: center;
+      max-width: 750px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

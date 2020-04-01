@@ -1,0 +1,43 @@
+@import 'variables';
+
+@each $size, $length in $spacers {
+  .m-#{$size} {
+    margin: $length !important;
+  }
+  .mt-#{$size},
+  .my-#{$size} {
+    margin-top: $length !important;
+  }
+  .mr-#{$size},
+  .mx-#{$size} {
+    margin-right: $length !important;
+  }
+  .mb-#{$size},
+  .my-#{$size} {
+    margin-bottom: $length !important;
+  }
+  .ml-#{$size},
+  .mx-#{$size} {
+    margin-left: $length !important;
+  }
+
+  .p-#{$size} {
+    padding: $length !important;
+  }
+  .pt-#{$size},
+  .py-#{$size} {
+    padding-top: $length !important;
+  }
+  .pr-#{$size},
+  .px-#{$size} {
+    padding-right: $length !important;
+  }
+  .pb-#{$size},
+  .py-#{$size} {
+    padding-bottom: $length !important;
+  }
+  .pl-#{$size},
+  .px-#{$size} {
+    padding-left: $length !important;
+  }
+}

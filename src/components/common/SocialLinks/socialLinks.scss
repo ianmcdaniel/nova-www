@@ -1,0 +1,19 @@
+.social-links {
+  display: flex;
+
+  &__icon-container {
+    width: 34px;
+    height: 34px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #f1f3f5;
+    color: #b7c2cc;
+    line-height: 34px;
+    text-align: center;
+    i {
+      margin-top: 8px;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+}

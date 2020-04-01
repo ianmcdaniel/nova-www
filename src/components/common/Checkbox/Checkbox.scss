@@ -1,0 +1,37 @@
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  user-select: none;
+  margin: 0 0 15px;
+  align-items: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    border: solid 2px #ccc;
+    background: none;
+    margin-right: 0.5rem;
+  }
+
+  &:hover input ~ .checkmark {
+    border-color: #4068b3;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: #4069b4;
+    border-color: #4068b3;
+  }
+}

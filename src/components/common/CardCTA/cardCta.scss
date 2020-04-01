@@ -1,0 +1,68 @@
+.card-cta {
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  &__disclosure {
+    text-transform: uppercase;
+    padding: 0 0 5px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #878e99;
+  }
+  &__name {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__image-container {
+    display: flex;
+    align-content: space-around;
+  }
+
+  &__image {
+    &--petal {
+      max-height: 140px;
+      display: block;
+    }
+    max-width: 131.5px;
+    margin: 0 auto;
+  }
+
+  &__nova-enabled {
+    color: #109761;
+  }
+
+  &__card-label {
+    color: #747c90;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2.52rem;
+  }
+
+  &__card-value {
+    font-size: 1.4rem;
+    color: #1c3250;
+    line-height: 2.52rem;
+  }
+
+  &__terms {
+    margin-right: 20px;
+    margin-left: 14px;
+    margin-top: 10px;
+    opacity: 0.7;
+    font-size: 1.3rem;
+
+    color: #3e46ce;
+  }
+}

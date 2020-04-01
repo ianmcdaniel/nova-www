@@ -1,0 +1,86 @@
+@import '../../../styles/variables.scss';
+
+.container {
+  max-width: 1128px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  &--full-width {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$grid-gutter;
+  margin-left: -$grid-gutter;
+
+  .col,
+  [class^='col-'],
+  [class*=' col-'] {
+    width: 100%;
+    min-height: 1px;
+    padding-right: $grid-gutter;
+    padding-left: $grid-gutter;
+  }
+
+  .col {
+    flex-basis: auto;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      max-width: percentage($i/$grid-columns);
+      flex: 0 0 percentage($i/$grid-columns);
+    }
+
+    .offset-#{$i} {
+      @if $i == 0 {
+        margin-left: 0;
+      } @else {
+        margin-left: percentage($i/$grid-columns);
+      }
+    }
+
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $name, $size in $breakpoints {
+    @media only screen and (min-width: $size) {
+      .col-#{$name} {
+        flex-basis: auto;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      @for $i from 1 through $grid-columns {
+        .col-#{$name}-#{$i} {
+          max-width: percentage($i/$grid-columns);
+          flex: 0 0 percentage($i/$grid-columns);
+        }
+
+        .offset-#{$name}-#{$i} {
+          @if $i == 0 {
+            margin-left: 0;
+          } @else {
+            margin-left: percentage($i/$grid-columns);
+          }
+        }
+
+        .order-#{$name}-#{$i} {
+          order: $i;
+        }
+        .order-#{$name}-auto {
+          order: unset;
+        }
+      }
+    }
+  }
+}

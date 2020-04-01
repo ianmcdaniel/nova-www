@@ -1,0 +1,90 @@
+.spotlight {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  &__slider {
+    display: flex;
+  }
+
+  &__arrow-container {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow {
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    padding: 15px;
+    background-color: rgba(5, 149, 192, 0.25);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 3.3rem;
+    line-height: 3.9rem;
+    font-weight: 400;
+  }
+
+  &__main-content {
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 2px 2px 14px 0 #dee4f3;
+    max-width: 801px;
+    min-height: 470px;
+  }
+
+  &__picture {
+    width: 50%;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    img {
+      width: 150px;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: -39px;
+    top: auto;
+    bottom: auto;
+    width: 75px;
+    height: 76px;
+    background-image: url('./images/quote_bckgrnd.svg');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 11.2rem;
+    line-height: 12.7rem;
+    font-weight: 400;
+    &-icon {
+      font-style: italic;
+      margin-left: -30px;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    background-color: #fafcff;
+    padding: 64px;
+    align-items: stretch;
+    border-left: 2px solid #e4e7f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/mixins';
+
+.expandable-list {
+  &__link {
+    color: #2172f3;
+  }
+  @extend %list-reset;
+
+  li p {
+    color: #43576b;
+  }
+
+  li:last-child p {
+    margin-bottom: 0.7rem;
+  }
+}

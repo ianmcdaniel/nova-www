@@ -1,0 +1,18 @@
+.category-list {
+  display: flex;
+  font-size: 1.2rem;
+  &__item {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 19px;
+    background-color: #f4f4ff;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: #3e46ce;
+  }
+}

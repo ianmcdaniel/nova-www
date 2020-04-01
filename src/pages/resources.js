@@ -1,42 +1,76 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import Layout from "../components/layout"
-import ArticlePreview from '../components/article-preview'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import get from 'lodash/get';
+import Helmet from 'react-helmet';
+import Layout from '../components/layout/Layout';
+import ArticlePreviewRow from '../components/common/ArticlePreviewRow';
+import ImageCopyBlock from '../components/blocks/ImageCopyBlock';
+import Breadcrumbs from '../components/common/Breadcrumbs';
 
-class ArticleIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const articles = get(this, 'props.data.allContentfulArticle.edges')
+const ArticleIndex = ({ data, location }) => {
+  const siteTitle = get(data, 'site.siteMetadata.title');
+  const categories = get(
+    data,
+    'allContentfulElementArticleCategory.nodes'
+  ).filter(
+    ({ slug, promotedArticles }) => slug !== 'promoted' && promotedArticles
+  );
+  const promoted = get(
+    data,
+    'contentfulElementArticleCategory.promotedArticles'
+  );
+  const hero = get(data, 'contentfulBlockImageWCopy');
+  const breadcrumbs = [
+    {
+      title: 'Resources',
+      isActive: true,
+    },
+  ];
+  return (
+    <Layout location={location}>
+      <Breadcrumbs crumbs={breadcrumbs} />
+      <div>
+        <Helmet title={siteTitle} />
+        <ImageCopyBlock {...hero} preheader="resource center" />
+        <div>
+          <div className="promoted-row">
+            <div className="link-list">
+              <h4 className="section-headline--small">Articles by Category</h4>
+              <ul>
+                {categories.map(({ slug, title }) => {
+                  return (
+                    <li key={slug}>
+                      <a href={`#${slug}`}>{title}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-    return (
-      <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <div className="main-hero">
-            <h1>Articles, Tips and Tricks for Newcomers</h1>
-            <p>Tips and guides to help you better integrate into your new community</p>
+            <ArticlePreviewRow
+              isSmall={true}
+              title="Most popular articles"
+              articles={promoted}
+              limit={3}
+            />
           </div>
-          <div className="wrapper">
-            <h2 className="section-headline">All articles</h2>
-            <ul className="article-list">
-              {articles.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+          {categories.map(({ slug, title, promotedArticles }) => {
+            return (
+              <ArticlePreviewRow
+                title={title}
+                key={slug}
+                anchor={slug}
+                articles={promotedArticles}
+              />
+            );
+          })}
         </div>
-      </Layout>
-    )
-  }
-}
+      </div>
+    </Layout>
+  );
+};
 
-export default ArticleIndex
+export default ArticleIndex;
 
 export const pageQuery = graphql`
   query ArticlesIndexQuery {
@@ -45,20 +79,47 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulArticle(sort: { fields: [updatedAt], order: DESC }) {
-      edges {
-        node {
+    allContentfulElementArticleCategory {
+      nodes {
+        id
+        title
+        slug
+        promotedArticles {
           slug
           title
           summary
-          updatedAt(formatString: "MMMM Do, YYYY")
           thumbnailImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+            fluid(maxWidth: 350) {
+              ...GatsbyContentfulFluid
             }
           }
         }
       }
     }
+    contentfulElementArticleCategory(slug: { eq: "promoted" }) {
+      promotedArticles {
+        slug
+        title
+        summary
+        thumbnailImage {
+          fluid(maxWidth: 350) {
+            ...GatsbyContentfulFluid
+          }
+        }
+      }
+    }
+    contentfulBlockImageWCopy(preheader: { eq: "Resource Center" }) {
+      title
+      id
+      image {
+        fluid(maxWidth: 1180, background: "rgb:000000") {
+          ...GatsbyContentfulFluid
+        }
+      }
+      copy {
+        json
+      }
+      imageOnRight
+    }
   }
-`
+`;

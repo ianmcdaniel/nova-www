@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+.filter-toggle {
+	display: none;
+}
+
+.filter-menu {
+	display: block;
+}
+
+.filter-country {
+	margin-bottom: 25px;
+}
+
+@media only screen and (max-width: map-get($breakpoints, 'lg')) {
+	.filter-toggle,
+	.filter-menu.open {
+		display: block;
+	}
+
+	.filter-menu {
+		display: none;
+		padding-bottom: 2rem;
+	}
+
+	.filter-control {
+		border: solid 1px #ddd;
+		border-width: 1px 0;
+		margin-bottom: 2rem;
+
+		.filter-toggle {
+			display: flex;
+			justify-content: space-between;
+			padding: 0.9rem 0;
+			font-weight: 500;
+			font-size: 1.1rem;
+			align-items: center;
+		}
+	}
+}

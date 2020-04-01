@@ -1,0 +1,14 @@
+.blog-index {
+  &__header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  &__main-content {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 80px;
+  }
+}

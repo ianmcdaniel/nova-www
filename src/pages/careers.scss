@@ -1,0 +1,73 @@
+.careers-page {
+  text-align: center;
+
+  &__logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  &__logo-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &__values {
+    text-align: left;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__text {
+      color: #747c90;
+      line-height: 2.52rem;
+      font-weight: 400;
+    }
+  }
+
+  &__work {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &__text {
+      color: #747c90;
+      line-height: 2.52rem;
+      font-weight: 400;
+    }
+  }
+
+  &__diversity {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    &__text {
+      color: #747c90;
+      line-height: 2.52rem;
+      font-weight: 400;
+    }
+    &__items {
+      max-width: 550px;
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+      margin-right: auto;
+      margin-left: auto;
+
+      h3 {
+        margin-top: 0;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-family: 'DM Serif Display', sans-serif;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #1c3250;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.two-column-offer {
+  padding-top: 80px;
+  background-color: rgba(93, 140, 180, 0.1);
+  margin-bottom: 100px;
+  &__text {
+    color: #747c90;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.52rem;
+    margin-bottom: 30px;
+    a {
+      text-decoration: underline;
+    }
+  }
+  &__image {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    color: #00c276;
+  }
+
+  &__card-column {
+    padding-right: 0 !important;
+    padding-left: 20px !important;
+    margin-bottom: -60px;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.email-cta {
+  margin: 3rem 0;
+
+  a {
+    color: #2172f3;
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, 'lg')) {
+  .email-cta {
+    display: none;
+  }
+}

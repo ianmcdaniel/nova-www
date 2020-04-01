@@ -1,0 +1,67 @@
+@import '../styles/variables';
+
+.disputes {
+  &__form {
+    padding: 45px;
+    border-radius: 8px;
+    background-color: #172f4d;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 80px;
+    margin-top: 60px;
+
+    textarea {
+      min-height: 200px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1rem;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 3.3rem;
+  }
+
+  &__error {
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background-color: $danger-color;
+    color: $gray-1;
+    font-weight: 600;
+    border-radius: 0 0 3px 3px;
+  }
+
+  &__field {
+    width: 100%;
+    height: 55px;
+    border-color: rgba(5, 149, 192, 0.17);
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: -2px 2px 9px 0 rgba(28, 50, 81, 0.08);
+    color: #1c3250;
+    line-height: 4.4rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 1.4rem;
+  }
+
+  &__divider {
+    width: 100px;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+  }
+}

@@ -1,0 +1,26 @@
+.benefits {
+  max-width: 1128px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &__text {
+    color: #747c90;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__benefit {
+    width: 17%;
+    min-width: 150px;
+  }
+
+  &__img {
+    width: 150px;
+  }
+}

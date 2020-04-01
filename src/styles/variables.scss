@@ -1,0 +1,103 @@
+$body-font: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, sans-serif;
+
+$breakpoints: (
+  sm: 33.75em,
+  md: 45em,
+  lg: 60em,
+);
+
+$zindexes: (
+  10: 10,
+  20: 20,
+  30: 30,
+);
+
+// Grid
+$grid-columns: 12;
+$grid-gutter: 15px;
+$grid-gutter-sm: 7px;
+
+// Spacers
+
+$spacer: 1.6rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  auto: auto,
+);
+// Colors
+$red: #cc4754;
+$tomato: #ff5c5c;
+$coral: #ff7d57;
+$orange: #e67716;
+$gold: #f7bb31;
+$lime: #70ce6f;
+$green: #10a771;
+$forest: #009688;
+$sky: #417bd8;
+$blue: #4069b4;
+$slate: #43576b;
+$pink: #ee0b62;
+$teal: #4bb2b3;
+
+$body-color: $slate;
+$link-color: $sky;
+
+$primary-color: $blue;
+$secondary-color: $slate;
+$success-color: $forest;
+$danger-color: $red;
+$info-color: $sky;
+$warning-color: $orange;
+$brand-color: $teal;
+
+$ui-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  danger: $danger-color,
+  info: $info-color,
+  warning: $warning-color,
+  brand: $brand-color,
+);
+
+$score-colors: (
+  bad: $tomato,
+  poor: $coral,
+  fair: $gold,
+  good: $lime,
+  excellent: $green,
+);
+
+$gray-1: #f9f9fb;
+$gray-2: #e4e7eb;
+$gray-3: #cbd0d8;
+$gray-4: #4c5965;
+$gray-5: #2e343f;
+
+$header-color: #f2f3f7;
+$header-height: 63px;
+$mobile-header-height: 60px;
+
+$button-border-radius: 0.3rem;
+$button-vertical-padding: 0.8rem;
+$button-horizontal-padding: 2.3rem;
+$button-line-height: 2.5rem;
+$button-font-size: 1.4rem;
+
+$button-sm-border-radius: 0.3rem;
+$button-sm-vertical-padding: 0.3rem;
+$button-sm-horizontal-padding: 1.3rem;
+$button-sm-line-height: 2.4rem;
+$button-sm-font-size: 1.2rem;
+$button-sm-line-height: 1.5rem;
+
+$button-lg-border-radius: 0.3rem;
+$button-lg-vertical-padding: 15px;
+$button-lg-horizontal-padding: 25px;
+$button-lg-line-height: 1rem;
+$button-lg-font-size: 1.7rem;

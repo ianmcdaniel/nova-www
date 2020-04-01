@@ -1,0 +1,17 @@
+.filter-checkbox {
+  display: flex;
+  position: relative;
+
+  img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .checkbox {
+    padding-right: 3px;
+  }
+}
+
+.tooltip-text {
+  font-size: 1.3rem;
+}

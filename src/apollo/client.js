@@ -1,16 +1,12 @@
 import ApolloClient from 'apollo-boost';
 import fetch from 'isomorphic-fetch';
 
+const API_URLS = {
+  development: 'http://localhost:8012/api/graphql',
+  staging: 'https://cms.aphrodite.novacredit.com/api/graphql',
+  production: 'https://cms.novacredit.com/api/graphql',
+};
+
 export const client = new ApolloClient({
-  uri: 'http://localhost:8012/api/graphql',
-  // uri: 'https://offers.novacredit.com/api/graphql',
-  // uri: 'https://cors-anywhere.herokuapp.com/https://offers.novacredit.com/api/graphql',
-  // fetch,
-  request: async operation => {
-    operation.setContext({
-      headers: {
-        origin: "https://novacredit.com"
-      }
-    });
-  },
+  uri: API_URLS[process.env.GATSBY_ENV || 'development'],
 });

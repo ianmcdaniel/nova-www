@@ -1,0 +1,149 @@
+@import '../../../styles/variables';
+
+$edu-pg-gutter: 20px;
+$edu-pg-progress-dot-size: 15px;
+$edu-pg-progress-dot-spacing: 23px;
+
+.interstitial-edu-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 50px;
+  text-align: center;
+
+  .edu-tab {
+    padding: 20px $edu-pg-gutter;
+
+    .subtitle {
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .edu-tab-img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
+
+.interstitial-edu-header {
+  position: relative;
+  padding: 12px $edu-pg-gutter;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.interstitial-edu-progress {
+  position: absolute;
+  top: 50%;
+  right: $edu-pg-gutter;
+  transform: translateY(-50%);
+
+  .dot {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: $edu-pg-progress-dot-size;
+    height: $edu-pg-progress-dot-size;
+    border: 1px solid $body-color;
+    border-radius: 50%;
+    margin-left: $edu-pg-progress-dot-spacing;
+
+    &.visited {
+      background-color: $body-color;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: $edu-pg-progress-dot-size +
+        (($edu-pg-progress-dot-spacing - $edu-pg-progress-dot-size) / 2);
+      top: 50%;
+      transform: translateY(-50%);
+      width: $edu-pg-progress-dot-spacing -
+        (($edu-pg-progress-dot-spacing - $edu-pg-progress-dot-size));
+      height: 1px;
+      background-color: $body-color;
+    }
+
+    &:first-child:after {
+      display: none;
+    }
+  }
+}
+
+.interstitial-edu-footer {
+  padding: 12px $edu-pg-gutter;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.interstitial-edu-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .btn-outline-secondary {
+    border: none;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+      background-color: #fff;
+      color: inherit;
+    }
+  }
+
+  .nav-button {
+    margin: 0;
+  }
+
+  .nav-button:last-child {
+    margin-left: 12px;
+  }
+}
+
+.sub-footer {
+  padding-top: 10px;
+  .btn-outline-secondary {
+    border: none;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+      background-color: #fff;
+      color: inherit;
+    }
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, 'lg')) {
+  .interstitial-edu-content {
+    margin: 0;
+    padding: 0;
+
+    .edu-tab {
+      padding: 0 10px;
+    }
+
+    .title {
+      font-size: 1.8em;
+    }
+
+    .subtitle {
+      font-size: 0.9em;
+    }
+  }
+
+  .interstitial-edu-footer-nav .nav-button {
+    width: 100%;
+    order: 1;
+
+    &.back-button {
+      order: 2;
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+}

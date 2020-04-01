@@ -1,0 +1,19 @@
+.icon-list {
+  max-width: 420px;
+  font-size: 1.4rem;
+  line-height: 2.52rem;
+
+  &__item {
+    padding-bottom: 8px;
+  }
+
+  &__text {
+    margin-left: 5px;
+  }
+
+  &__icon-wrapper {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+  }
+}

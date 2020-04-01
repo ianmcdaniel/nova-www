@@ -1,0 +1,113 @@
+@import '../../../styles/variables';
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: $button-vertical-padding $button-horizontal-padding;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  border-radius: $button-border-radius;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn-rounded {
+  border-radius: 5rem !important;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-small {
+  border-radius: $button-sm-border-radius;
+  padding: $button-sm-vertical-padding $button-sm-horizontal-padding;
+  line-height: $button-sm-line-height;
+  font-size: $button-sm-font-size;
+}
+
+.btn-large {
+  border-radius: $button-lg-border-radius;
+  padding: $button-lg-vertical-padding $button-lg-horizontal-padding;
+  line-height: $button-lg-line-height;
+  font-size: $button-lg-font-size;
+}
+
+.btn-square,
+.btn-circle {
+  padding: 0;
+  width: calc((#{$button-vertical-padding} * 2) + #{$button-line-height} + 2px);
+  height: calc(
+    (#{$button-vertical-padding} * 2) + #{$button-line-height} + 2px
+  );
+
+  &.btn-small {
+    width: calc(
+      (#{$button-sm-vertical-padding} * 2) + #{$button-sm-line-height} + 2px
+    );
+    height: calc(
+      (#{$button-sm-vertical-padding} * 2) + #{$button-sm-line-height} + 2px
+    );
+  }
+
+  &.btn-large {
+    width: calc(
+      (#{$button-lg-vertical-padding} * 2) + #{$button-lg-line-height} + 1px
+    );
+    height: calc(
+      (#{$button-lg-vertical-padding} * 2) + #{$button-lg-line-height} + 1px
+    );
+  }
+}
+
+.btn-circle {
+  border-radius: 5rem;
+}
+
+@each $name, $color in $ui-colors {
+  .btn-#{$name} {
+    color: #fff;
+    background-color: $color;
+
+    &:disabled {
+      color: transparentize(#fff, 0.3);
+      background-color: transparentize(desaturate($color, 30%), 0.7);
+    }
+  }
+
+  .btn-soft-#{$name} {
+    color: $color;
+    background-color: mix(#fff, $color, 90%);
+
+    &:hover {
+      color: #fff;
+      background-color: $color;
+    }
+
+    &:disabled {
+      color: transparentize(desaturate($color, 50%), 0.5);
+      background-color: transparentize(mix(#fff, $color, 90%), 0.4);
+    }
+  }
+
+  .btn-outline-#{$name} {
+    background-color: transparent;
+    border: 2px solid $color;
+    color: $color;
+
+    &:hover {
+      color: #fff;
+      background-color: $color;
+    }
+  }
+}

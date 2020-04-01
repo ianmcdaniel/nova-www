@@ -1,0 +1,24 @@
+.preview {
+  &__title {
+    color: #3e46ce;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  &__summary {
+    color: #878e99;
+    font-size: 1.3rem;
+  }
+
+  &__date {
+    font-size: 1.1rem;
+    color: #747c90;
+  }
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,60 @@
+.amex-instructions {
+  padding-bottom: 80px;
+  &__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 15px 20px 20px;
+    align-items: stretch;
+    border-top: 7px solid #f7f7f7;
+    border-bottom: 5px solid #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    height: 100%;
+  }
+  &__step-number {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee;
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 800;
+    text-align: left;
+  }
+
+  &__image {
+    width: 120px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  &__step-text {
+    padding-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: #747c90;
+    line-height: 2.52rem;
+  }
+
+  &__bottom-text {
+    max-width: 650px;
+    margin: 40px auto 0;
+    text-align: center;
+    color: #747c90;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.52rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

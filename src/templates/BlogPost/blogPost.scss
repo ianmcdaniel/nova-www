@@ -1,0 +1,31 @@
+.blog-post {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  color: #1c3250;
+  max-width: 720px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  text-size-adjust: 100%;
+  &__author {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__header {
+    margin-bottom: 35px;
+  }
+  h3 {
+    font-size: 2.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 3rem;
+  }
+
+  p {
+    margin-bottom: 24px;
+    line-height: 2.38rem;
+    font-weight: 500;
+    margin-block-start: 0px;
+  }
+}

@@ -1,0 +1,35 @@
+.author {
+  display: flex;
+
+  &__image {
+    &--blog {
+      max-width: 40px;
+      max-height: 40px;
+      min-width: 40px;
+      min-height: auto;
+    }
+    width: auto;
+    max-height: none;
+    max-width: 50px;
+    min-height: auto;
+    min-width: 50px;
+    margin-top: 0;
+    margin-right: 20px;
+    align-self: flex-start;
+    border-radius: 40px;
+  }
+
+  &__name {
+    &--blog {
+      font-size: 1.5rem;
+    }
+    font-weight: 600;
+  }
+
+  &__summary {
+    &--blog {
+      font-style: italic;
+    }
+    color: #747c90;
+  }
+}

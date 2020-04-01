@@ -1,0 +1,41 @@
+.country-navigator {
+  color: #c5d1e0;
+  &__flag {
+    width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+  }
+
+  &__label {
+    line-height: 2.24rem;
+    display: block;
+    padding-top: 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__no-country {
+    margin-top: 15px;
+
+    a {
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 0.63);
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding: 7px 2px;
+    line-height: 2.52rem;
+    flex-wrap: nowrap;
+  }
+
+  &__select-container {
+    width: 370px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: #747c90;
+    border-radius: 4px;
+  }
+}

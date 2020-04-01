@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+// Ad Disclosure
+.disclosure {
+  margin-left: auto;
+
+  p {
+    color: $link-color;
+    cursor: pointer;
+  }
+
+  .disclosure-tooltip {
+    padding-right: 200px;
+  }
+}
+
+.tooltip-text {
+  font-size: 1.3rem;
+}

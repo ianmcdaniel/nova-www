@@ -1,0 +1,14 @@
+.disclaimer {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: #f1f3f8;
+  text-align: left;
+  max-width: 720px;
+
+  &__text {
+    color: #747c90;
+    font-size: 13px;
+  }
+}

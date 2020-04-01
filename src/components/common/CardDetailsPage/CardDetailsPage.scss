@@ -1,0 +1,35 @@
+.card-img {
+  width: 100%;
+  max-width: 300px;
+  margin: 7px auto 21px;
+
+  &.is-petal-card {
+    display: block;
+    width: unset;
+    max-width: unset;
+    height: 100%;
+    max-height: 200px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.page-loader {
+  position: relative;
+  height: 400px;
+}
+
+.card-rates-link {
+  margin-top: 10px;
+  text-align: center;
+  color: #2172f3;
+}
+
+.card-details {
+  &__main-row {
+    margin-top: 42px;
+  }
+  &__primary-content {
+    padding-left: 42px !important;
+  }
+}

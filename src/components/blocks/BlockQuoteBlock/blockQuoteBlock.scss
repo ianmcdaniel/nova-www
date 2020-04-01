@@ -1,0 +1,27 @@
+.block-quote {
+  &__image {
+    max-width: 160px;
+    margin-left: 30px;
+  }
+
+  &__image-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__quote {
+    padding: 10px 20px;
+    border-left: 3px solid #ebebeb;
+    font-size: 1.6rem;
+    color: #747c90;
+    line-height: 2.4rem;
+  }
+
+  &__attribution {
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+  }
+}

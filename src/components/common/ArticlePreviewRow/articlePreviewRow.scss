@@ -1,0 +1,39 @@
+.article-preview-row {
+  &--small {
+    width: 100%;
+  }
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__header {
+    display: flex;
+  }
+
+  &__link {
+    margin-left: auto;
+    color: #3e46ce;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1c3250;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    &--small {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 24px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+}
