@@ -44,14 +44,14 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'NOVA',
-        fieldName: 'nova',
-        url: 'https://offers.novacredit.com/api/graphql',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-graphql',
+    //   options: {
+    //     typeName: 'NOVA',
+    //     fieldName: 'nova',
+    //     url: 'https://offers.novacredit.com/api/graphql',
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-create-client-paths',
       options: { prefixes: ['/cards/*'] },
