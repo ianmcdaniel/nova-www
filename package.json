@@ -8,7 +8,6 @@
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
     "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
     "@contentful/rich-text-react-renderer": "^13.2.0",
-    "@novacredit/pandorasbox": "^0.0.65",
     "apollo-boost": "^0.4.3",
     "classnames": "^2.2.6",
     "formik": "^2.1.4",

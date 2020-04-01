@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { Select } from '@novacredit/pandorasbox';
+
 import { Link } from 'gatsby';
 import { useLocation, useNavigate } from '@reach/router';
 import './countryNavigator.scss';
@@ -88,16 +88,19 @@ const CountryNavigator = ({ type }) => {
     </div>
   ) : (
     <div className="country-navigator__select-container">
-      <Select
+      <select
         className="text-left"
         classNamePrefix="country-select"
         inputName="countrySelect"
         placeholder="Select Country..."
         value={null}
         onChange={onChange}
-        data={options}
         maxHeight={300}
-      />
+      >
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>{label}</option>
+        ))}
+      </select>
     </div>
   );
 };

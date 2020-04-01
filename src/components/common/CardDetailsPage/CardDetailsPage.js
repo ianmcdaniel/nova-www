@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import React from 'react';
-import { Spinner } from '@novacredit/pandorasbox';
+
 import { useQuery } from '@apollo/react-hooks';
 
 import AdDisclosure from '../AdDisclosure';
@@ -24,7 +24,7 @@ const CardDetailsPage = ({ slug, location }) => {
   if (loading) {
     return (
       <div className="page-loader">
-        <Spinner />
+        LOADING...
       </div>
     );
   }

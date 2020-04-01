@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Select } from '@novacredit/pandorasbox';
+
 import { string } from 'prop-types';
 
 import countries from '../../../assets/data/countries.json';
@@ -72,17 +72,20 @@ const CountryFilter = ({ location }) => {
 
   return (
     <div className="country-select">
-      <Select
+      <select
         className="text-left"
         classNamePrefix="country-select"
         inputName="countrySelect"
         placeholder="Select Country..."
         value={selected ? selected.value : ''}
         onChange={onChange}
-        data={options}
         maxHeight={300}
         filterOption={filterOptions}
-      />
+      >
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>{label}</option>
+        ))}
+      </select>
     </div>
   );
 };
